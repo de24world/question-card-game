@@ -23,9 +23,7 @@ const GameCard = (props) => {
     <>
       <Container>
         <TheCard>
-          <TheBack>
-            <h1>Back</h1>
-          </TheBack>
+          <TheBack />
 
           <TheFront>
             <h1>Front of Card</h1>

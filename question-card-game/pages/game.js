@@ -16,7 +16,10 @@ const game = () => {
       <Row>
         <Col xs={3} sm={6} lg={8}></Col>
         <Col xs={18} sm={12} lg={8}>
+          <h1>This is Random Question Card Game</h1>
           <GameCard />
+          <p>Please drag(mobile:click) mouse on the card</p>
+          <span>2. click the next button</span>
         </Col>
         <Col xs={3} sm={6} lg={8}></Col>
       </Row>

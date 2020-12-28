@@ -20,7 +20,12 @@ const AppLayout = () => {
           </Menu.Item>
           <Menu.Item>
             <Link href="/game">
-              <a>Game</a>
+              <a>Card Game</a>
+            </Link>
+          </Menu.Item>
+          <Menu.Item>
+            <Link href="/penalty">
+              <a>Penalty Game</a>
             </Link>
           </Menu.Item>
         </Menu>
