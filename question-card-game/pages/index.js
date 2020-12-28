@@ -1,4 +1,3 @@
-import Head from "next/head";
 import AppLayout from "../components/AppLayout";
 import styles from "../styles/Home.module.css";
 

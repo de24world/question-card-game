@@ -1,21 +1,29 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Link from "next/link";
+import { Menu } from "antd";
 
 const AppLayout = () => {
   return (
     <div>
-      This is AppLayout
       <div>
-        <Link href="/">
-          <a>Home</a>
-        </Link>
-        <Link href="/about">
-          <a>About</a>
-        </Link>
-        <Link href="/game">
-          <a>game</a>
-        </Link>
+        <Menu mode="horizontal">
+          <Menu.Item>
+            <Link href="/">
+              <a>Home</a>
+            </Link>
+          </Menu.Item>
+          <Menu.Item>
+            <Link href="/about">
+              <a>About</a>
+            </Link>
+          </Menu.Item>
+          <Menu.Item>
+            <Link href="/game">
+              <a>Game</a>
+            </Link>
+          </Menu.Item>
+        </Menu>
       </div>
     </div>
   );
