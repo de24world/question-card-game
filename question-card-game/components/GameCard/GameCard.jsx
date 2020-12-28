@@ -23,19 +23,18 @@ const GameCard = (props) => {
     <>
       <Container>
         <TheCard>
+          <TheBack>
+            <h1>Back</h1>
+          </TheBack>
+
           <TheFront>
             <h1>Front of Card</h1>
-            <p>Please drag or click here to mouse</p>
-          </TheFront>
-
-          <TheBack>
-            <h1>Back of Card</h1>
             <p>{questions.text}?</p>
             <p>Number: {questions.id}/100</p>
             <Button type="primary" onClick={getQuestion}>
               Next
             </Button>
-          </TheBack>
+          </TheFront>
         </TheCard>
       </Container>
     </>
@@ -58,17 +57,20 @@ const TheCard = styled.div`
   }
 `;
 
-const TheFront = styled.div`
+const TheBack = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   border-radius: 10px;
-  backface-visibility: hidden;
-  overflow: hidden;
-  background: #ffc728;
-  color: #000;
+  background-image: url("https://bfa.github.io/solitaire-js/img/card_back_bg.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  /* background: #ffc728; */
 `;
 
-const TheBack = styled.div`
+const TheFront = styled.div`
   position: absolute;
   top: 0;
   left: 0;
