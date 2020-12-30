@@ -32,7 +32,13 @@ const GameCard = (props) => {
             <TheFront>
               <h2>{questions.text}?</h2>
               <p>Number: {questions.id}/100</p>
-              <Button danger type="primary" size="large" onClick={getQuestion}>
+              <Button
+                danger
+                type="primary"
+                size="large"
+                style={{ position: "absolute", bottom: "10%", left: "35%" }}
+                onClick={getQuestion}
+              >
                 Next
               </Button>
             </TheFront>
