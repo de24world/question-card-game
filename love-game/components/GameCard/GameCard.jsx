@@ -19,7 +19,7 @@ const GameCard = (props) => {
     getQuestion();
   }, []);
 
-  console.log(theme);
+  // console.log(theme);
   //  theme or data
 
   return (
@@ -30,10 +30,9 @@ const GameCard = (props) => {
             <TheBack />
 
             <TheFront>
-              <h1>Front of Card</h1>
-              <p>{questions.text}?</p>
+              <h2>{questions.text}?</h2>
               <p>Number: {questions.id}/100</p>
-              <Button type="primary" danger onClick={getQuestion}>
+              <Button danger type="primary" size="large" onClick={getQuestion}>
                 Next
               </Button>
             </TheFront>
@@ -52,7 +51,7 @@ const Container = styled.div`
 const TheCard = styled.div`
   width: 100%;
   height: 100%;
-  border-radius: 10px;
+  /* border-radius: ${(props) => props.theme.fontSizes.base}; */
   transform-style: preserve-3d;
   transition: all 0.8s ease;
   &:hover {
@@ -64,8 +63,8 @@ const TheBack = styled.div`
   width: 100%;
   height: 100%;
   background-image: url("https://bfa.github.io/solitaire-js/img/card_back_bg.png");
-  background-size: contain;
-  background-repeat: no-repeat;
+  background-size: auto;
+  background-repeat: round;
 `;
 
 const TheFront = styled.div`
@@ -74,13 +73,19 @@ const TheFront = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
+  border-width: 10px;
   border-radius: 10px;
-  box-shadow: 5px 5px;
+  border-style: solid;
+  border-color: ${(props) => props.theme.colors.danger};
   backface-visibility: hidden;
   overflow: hidden;
   background: ${(props) => props.theme.colors.white};
   text-align: center;
   transform: rotateY(180deg);
+`;
+
+const StyledButton = styled(Button)`
+  position: absolute;
 `;
 
 GameCard.propTypes = {};

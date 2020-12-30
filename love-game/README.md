@@ -1,6 +1,12 @@
+License
+de24world@gmail.com
+
 Todo list
 
 1. css 꾸미기 (앞면)
+
+https://www.amazon.de/identity-Kartenspiel-Gesellschaftsspiel-Freundeskreis-Personality/dp/B07Y5CQ3FW
+
 2. data 업데이트
 3. 번역
 

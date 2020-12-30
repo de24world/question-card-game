@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <meta charSet="utf-8" />
-        <title>Erotic Game</title>
+        <title>Love Game</title>
       </Head>
       <Component {...pageProps} />
     </>

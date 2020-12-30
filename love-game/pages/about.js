@@ -2,17 +2,17 @@ import React from "react";
 import AppLayout from "../components/AppLayout";
 import Head from "next/head";
 
-const penalty = () => {
+const about = () => {
   return (
     <>
       <Head>
-        <title>Erotic Game | Penalty</title>
+        <title>Love Game | About</title>
       </Head>
       <AppLayout>
-        <div>This is Penalty page</div>;
+        <div>This is about page</div>;
       </AppLayout>
     </>
   );
 };
 
-export default penalty;
+export default about;

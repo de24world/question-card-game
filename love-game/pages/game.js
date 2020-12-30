@@ -10,7 +10,7 @@ const game = () => {
   return (
     <>
       <Head>
-        <title>Erotic Game | Game </title>
+        <title>Love Game | Card Game </title>
       </Head>
       <AppLayout />
       <Row>
