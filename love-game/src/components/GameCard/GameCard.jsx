@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import data from "../../data/question.json";
 
 import styled, { ThemeProvider } from "styled-components";
-import theme from "../../styles/theme";
+import theme from "../../../styles/theme";
 
 import { Button } from "antd";
 

@@ -1,6 +1,6 @@
 import React from "react";
-import AppLayout from "../components/AppLayout";
-import GameCard from "../components/GameCard/GameCard";
+import AppLayout from "../src/components/AppLayout";
+import GameCard from "../src/components/GameCard/GameCard";
 
 import Head from "next/head";
 
