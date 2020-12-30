@@ -2,9 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import Link from "next/link";
 import { Menu } from "antd";
-import { withTranslation } from "../../i18n";
 
-const AppLayout = () => {
+const MenuHeader = () => {
   return (
     <div>
       <div>
@@ -21,7 +20,7 @@ const AppLayout = () => {
           </Menu.Item>
           <Menu.Item>
             <Link href="/game">
-              <a>{t("Card Game")}</a>
+              <a>Card Game</a>
             </Link>
           </Menu.Item>
           <Menu.Item>
@@ -35,6 +34,6 @@ const AppLayout = () => {
   );
 };
 
-AppLayout.propTypes = {};
+MenuHeader.propTypes = {};
 
-export default withTranslation(AppLayout);
+export default MenuHeader;
