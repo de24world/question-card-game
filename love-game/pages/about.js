@@ -1,5 +1,5 @@
 import React from "react";
-import AppLayout from "../src/components/AppLayout";
+import MenuHeader from "../src/components/MenuHeader";
 import Head from "next/head";
 
 const about = () => {
@@ -8,9 +8,9 @@ const about = () => {
       <Head>
         <title>Love Game | About</title>
       </Head>
-      <AppLayout>
+      <MenuHeader>
         <div>This is about page</div>;
-      </AppLayout>
+      </MenuHeader>
     </>
   );
 };

@@ -1,5 +1,5 @@
 import React from "react";
-import AppLayout from "../src/components/AppLayout";
+import MenuHeader from "../src/components/MenuHeader";
 import GameCard from "../src/components/GameCard/GameCard";
 
 import Head from "next/head";
@@ -12,7 +12,7 @@ const game = () => {
       <Head>
         <title>Love Game | Card Game </title>
       </Head>
-      <AppLayout />
+      <MenuHeader />
       <Row>
         <Col xs={3} sm={6} lg={8}></Col>
         <Col xs={18} sm={12} lg={8}>

@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Link from "next/link";
 import { Menu } from "antd";
+import { withTranslation } from "../../i18n";
 
 const AppLayout = () => {
   return (
@@ -20,7 +21,7 @@ const AppLayout = () => {
           </Menu.Item>
           <Menu.Item>
             <Link href="/game">
-              <a>Card Game</a>
+              <a>{t("Card Game")}</a>
             </Link>
           </Menu.Item>
           <Menu.Item>
@@ -36,4 +37,4 @@ const AppLayout = () => {
 
 AppLayout.propTypes = {};
 
-export default AppLayout;
+export default withTranslation(AppLayout);

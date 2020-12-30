@@ -9,6 +9,8 @@ https://www.amazon.de/identity-Kartenspiel-Gesellschaftsspiel-Freundeskreis-Pers
 
 2. data 업데이트
 3. 번역
+   https://github.com/isaachinman/next-i18next
+   https://www.youtube.com/watch?v=oxsLlvJZ0RM&ab_channel=Technouz
 
 색상 URL
 https://flatuicolors.com/

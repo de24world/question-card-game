@@ -1,5 +1,5 @@
 import React from "react";
-import AppLayout from "../src/components/AppLayout";
+import MenuHeader from "../src/components/MenuHeader";
 import Head from "next/head";
 
 const penalty = () => {
@@ -8,9 +8,9 @@ const penalty = () => {
       <Head>
         <title>Love Game | Penalty</title>
       </Head>
-      <AppLayout>
+      <MenuHeader>
         <div>This is Penalty page</div>;
-      </AppLayout>
+      </MenuHeader>
     </>
   );
 };
