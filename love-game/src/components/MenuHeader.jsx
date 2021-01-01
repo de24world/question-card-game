@@ -7,7 +7,7 @@ const MenuHeader = () => {
   return (
     <div>
       <div>
-        <Menu mode="horizontal">
+        <Menu mode="horizontal" theme="dark" defaultSelectedKeys={["1"]}>
           <Menu.Item>
             <Link href="/">
               <a>Home</a>
