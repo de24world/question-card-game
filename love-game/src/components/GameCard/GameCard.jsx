@@ -6,6 +6,7 @@ import styled, { ThemeProvider } from "styled-components";
 import theme from "../../../styles/theme";
 
 import { Button } from "antd";
+import { HeartOutlined } from "@ant-design/icons";
 
 const GameCard = (props) => {
   const [questions, setQuestions] = useState("");
@@ -27,16 +28,30 @@ const GameCard = (props) => {
       <ThemeProvider theme={theme}>
         <Container>
           <TheCard>
-            <TheBack />
+            <TheBack>
+              <HeartOutlined
+                style={{
+                  color: "white",
+                  fontSize: "250px",
+                  marginTop: "25px",
+                }}
+              />
+            </TheBack>
 
             <TheFront>
-              <h2>{questions.text}?</h2>
-              <p>Number: {questions.id}/100</p>
+              <p>{questions.id}/100</p>
+              <Text>{questions.text}?</Text>
               <Button
                 danger
                 type="primary"
                 size="large"
-                style={{ position: "absolute", bottom: "10%", left: "35%" }}
+                style={{
+                  position: "absolute",
+                  bottom: "5%",
+                  left: "25%",
+                  width: "50%",
+                  height: "15%",
+                }}
                 onClick={getQuestion}
               >
                 Next
@@ -57,7 +72,6 @@ const Container = styled.div`
 const TheCard = styled.div`
   width: 100%;
   height: 100%;
-  /* border-radius: ${(props) => props.theme.fontSizes.base}; */
   transform-style: preserve-3d;
   transition: all 0.8s ease;
   &:hover {
@@ -68,9 +82,14 @@ const TheCard = styled.div`
 const TheBack = styled.div`
   width: 100%;
   height: 100%;
+  background-color: ${(props) => props.theme.colors.danger};
+  border-radius: 10px;
+
+  /*
   background-image: url("https://bfa.github.io/solitaire-js/img/card_back_bg.png");
   background-size: auto;
   background-repeat: round;
+  */
 `;
 
 const TheFront = styled.div`
@@ -79,15 +98,26 @@ const TheFront = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  border-width: 10px;
+  border-width: 5px;
   border-radius: 10px;
-  border-style: solid;
-  border-color: ${(props) => props.theme.colors.danger};
+  border-style: double;
+  border-color: black;
   backface-visibility: hidden;
   overflow: hidden;
-  background: ${(props) => props.theme.colors.white};
+  background: white;
   text-align: center;
   transform: rotateY(180deg);
+`;
+
+const Text = styled.h3`
+  vertical-align: middle;
+  text-align: center;
+  border-radius: 10px;
+  color: white;
+  padding: 10px;
+  margin: 15px;
+  height: 180px;
+  background-color: ${(props) => props.theme.colors.danger};
 `;
 
 const StyledButton = styled(Button)`
