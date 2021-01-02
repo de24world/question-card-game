@@ -5,7 +5,8 @@ import data from "../../data/question.json";
 import styled, { ThemeProvider } from "styled-components";
 import theme from "../../../styles/theme";
 
-import { Button } from "antd";
+import { Button, Row, Col } from "antd";
+
 import { HeartOutlined } from "@ant-design/icons";
 
 const GameCard = (props) => {
@@ -26,39 +27,45 @@ const GameCard = (props) => {
   return (
     <>
       <ThemeProvider theme={theme}>
-        <Container>
-          <TheCard>
-            <TheBack>
-              <HeartOutlined
-                style={{
-                  color: "white",
-                  fontSize: "250px",
-                  marginTop: "25px",
-                }}
-              />
-            </TheBack>
+        <Row>
+          <Col xs={2} sm={3} lg={3}></Col>
+          <Col xs={20} sm={18} lg={18}>
+            <Container>
+              <TheCard>
+                <TheBack>
+                  <HeartOutlined
+                    style={{
+                      color: "white",
+                      fontSize: "250px",
+                      marginTop: "25px",
+                    }}
+                  />
+                </TheBack>
 
-            <TheFront>
-              <p>{questions.id}/100</p>
-              <Text>{questions.text}?</Text>
-              <Button
-                danger
-                type="primary"
-                size="large"
-                style={{
-                  position: "absolute",
-                  bottom: "5%",
-                  left: "25%",
-                  width: "50%",
-                  height: "15%",
-                }}
-                onClick={getQuestion}
-              >
-                Next
-              </Button>
-            </TheFront>
-          </TheCard>
-        </Container>
+                <TheFront>
+                  <p>{questions.id}/100</p>
+                  <Text>{questions.text}?</Text>
+                  <Button
+                    danger
+                    type="primary"
+                    size="large"
+                    style={{
+                      position: "absolute",
+                      bottom: "5%",
+                      left: "25%",
+                      width: "50%",
+                      height: "15%",
+                    }}
+                    onClick={getQuestion}
+                  >
+                    Next
+                  </Button>
+                </TheFront>
+              </TheCard>
+            </Container>
+          </Col>
+          <Col xs={2} sm={3} lg={3}></Col>
+        </Row>
       </ThemeProvider>
     </>
   );
