@@ -23,11 +23,13 @@ const MenuHeader = () => {
               <a>Card Game</a>
             </Link>
           </Menu.Item>
+          {/* 
           <Menu.Item>
             <Link href="/penalty">
               <a>Penalty Game</a>
             </Link>
-          </Menu.Item>
+          </Menu.Item> 
+          */}
         </Menu>
       </div>
     </div>

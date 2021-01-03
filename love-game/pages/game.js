@@ -17,14 +17,14 @@ const game = () => {
       <Row>
         <Col xs={1} sm={3} lg={4}></Col>
         <Col xs={22} sm={18} lg={16}>
-          <H1>Random Question Card Game</H1>
+          <Title>Random Question Card </Title>
           <GameCard />
-          <br></br>
-          <P>
-            1. Please drag(mobile:click) mouse on the card
-            <br></br>
-            2. click the next button
-          </P>
+          <Description>
+            <h3>How to?</h3>
+            <p>1. Please drag mouse on the card</p>
+            <p>(Mobile : click the Card)</p>
+            <p>2. click the next button</p>
+          </Description>
         </Col>
         <Col xs={1} sm={3} lg={4}></Col>
       </Row>
@@ -32,11 +32,11 @@ const game = () => {
   );
 };
 
-const H1 = styled.h1`
+const Title = styled.h1`
   text-align: center;
 `;
 
-const P = styled.p`
+const Description = styled.p`
   text-align: center;
 `;
 
