@@ -27,53 +27,49 @@ const GameCard = (props) => {
   return (
     <>
       <ThemeProvider theme={theme}>
-        <Row>
-          <Col xs={2} sm={3} lg={3}></Col>
-          <Col xs={20} sm={18} lg={18}>
-            <Container>
-              <TheCard>
-                <TheBack>
-                  <HeartOutlined
-                    style={{
-                      color: "white",
-                      fontSize: "250px",
-                      marginTop: "25px",
-                    }}
-                  />
-                </TheBack>
+        <Container>
+          <TheCard>
+            <TheBack>
+              <HeartOutlined
+                style={{
+                  color: "white",
+                  fontSize: "250px",
+                  marginTop: "25px",
+                }}
+              />
+            </TheBack>
 
-                <TheFront>
-                  <p>{questions.id}/100</p>
-                  <Text>{questions.text}?</Text>
-                  <Button
-                    danger
-                    type="primary"
-                    size="large"
-                    style={{
-                      position: "absolute",
-                      bottom: "5%",
-                      left: "25%",
-                      width: "50%",
-                      height: "15%",
-                    }}
-                    onClick={getQuestion}
-                  >
-                    Next
-                  </Button>
-                </TheFront>
-              </TheCard>
-            </Container>
-          </Col>
-          <Col xs={2} sm={3} lg={3}></Col>
-        </Row>
+            <TheFront>
+              <p>{questions.id}/100</p>
+              <Text>{questions.text}?</Text>
+              <Button
+                danger
+                type="primary"
+                size="large"
+                style={{
+                  position: "absolute",
+                  bottom: "5%",
+                  left: "25%",
+                  width: "50%",
+                  height: "15%",
+                }}
+                onClick={getQuestion}
+              >
+                Next
+              </Button>
+            </TheFront>
+          </TheCard>
+        </Container>
       </ThemeProvider>
     </>
   );
 };
 
 const Container = styled.div`
-  max-width: 250px;
+  width: 250px;
   height: 320px;
+  display: block;
+  margin: 0px auto;
 `;
 
 const TheCard = styled.div`
