@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <>
       <MenuHeader />
-      <div>this is index page</div>
+      <div>indexpage</div>
       <p>Current locale: {locale}</p>
       <p>Default locale: {defaultLocale}</p>
       <p>Configured locales: {JSON.stringify(locales)}</p>
