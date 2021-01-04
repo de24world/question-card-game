@@ -1,4 +1,6 @@
 {
   "indexpage": "indexpage",
+  "error-with-status": "error-with-status",
+  "error-without-status": "error-without-status",
   "Card Game": "Card Game"
 }

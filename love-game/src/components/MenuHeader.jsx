@@ -2,8 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import Link from "next/link";
 import { Menu } from "antd";
+import { withTranslation } from "../../i18n";
 
-const MenuHeader = () => {
+const MenuHeader = ({ t }) => {
   return (
     <div>
       <div>
@@ -20,7 +21,7 @@ const MenuHeader = () => {
           </Menu.Item>
           <Menu.Item>
             <Link href="/game">
-              <a>Card Game</a>
+              <a>{t("Card Game")}</a>
             </Link>
           </Menu.Item>
           {/* 
@@ -36,6 +37,10 @@ const MenuHeader = () => {
   );
 };
 
+MenuHeader.getInitialProps = async () => ({
+  namespacesRequired: ["common"],
+});
+
 MenuHeader.propTypes = {};
 
-export default MenuHeader;
+export default withTranslation("common")(MenuHeader);

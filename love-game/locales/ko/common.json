@@ -1,4 +1,6 @@
 {
   "indexpage": "인덱스페이지",
+  "error-with-status": "에러-상태",
+  "error-without-status": "에러 없는 상태",
   "Card Game": "카드 게임"
 }
