@@ -11,6 +11,10 @@ https://www.amazon.de/identity-Kartenspiel-Gesellschaftsspiel-Freundeskreis-Pers
 3. 번역
    https://nextjs.org/docs/advanced-features/i18n-routing
 
+4. error 페이지 커스텀하기
+
+(5. 독일어 테스트해보기)
+
 색상 URL
 https://flatuicolors.com/
 
