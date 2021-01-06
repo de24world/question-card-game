@@ -6,10 +6,11 @@ import styled, { ThemeProvider } from "styled-components";
 import theme from "../../../styles/theme";
 
 import { Button, Row, Col } from "antd";
-
 import { HeartOutlined } from "@ant-design/icons";
 
-const GameCard = (props) => {
+import { withTranslation } from "../../../i18n";
+
+const GameCard = ({ t }) => {
   const [questions, setQuestions] = useState("");
 
   const getQuestion = () => {
@@ -55,7 +56,7 @@ const GameCard = (props) => {
                 }}
                 onClick={getQuestion}
               >
-                Next
+                {t("Next")}
               </Button>
             </TheFront>
           </TheCard>
@@ -127,6 +128,10 @@ const StyledButton = styled(Button)`
   position: absolute;
 `;
 
+GameCard.getInitialProps = async () => ({
+  namespacesRequired: ["common"],
+});
+
 GameCard.propTypes = {};
 
-export default GameCard;
+export default withTranslation("common")(GameCard);
