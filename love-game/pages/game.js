@@ -22,7 +22,11 @@ const game = ({ t }) => {
           <Title>{t("Random Question Card")}</Title>
           <GameCard />
           <Description>
-            {t("Howto")}?
+            <br></br>
+            <h2>{t("How to")}?</h2>
+            {t("explain1")} <br></br>
+            {t("explain2")} <br></br>
+            {t("explain3")}
             {/* 
             {t("1. Please drag mouse on the card")}
             {t("Mobile : click the Card")}
