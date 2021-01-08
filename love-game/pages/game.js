@@ -21,9 +21,9 @@ const game = ({ t }) => {
         <Col xs={22} sm={18} lg={16}>
           <Title>{t("Random Question Card")}</Title>
           <GameCard />
+          <br></br>
+          <How>{t("How to")}</How>
           <Description>
-            <br></br>
-            <h2>{t("How to")}?</h2>
             {t("explain1")} <br></br>
             {t("explain2")} <br></br>
             {t("explain3")}
@@ -41,6 +41,10 @@ const game = ({ t }) => {
 };
 
 const Title = styled.h1`
+  text-align: center;
+`;
+
+const How = styled.h2`
   text-align: center;
 `;
 

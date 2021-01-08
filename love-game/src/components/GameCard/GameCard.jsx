@@ -5,12 +5,15 @@ import data from "../../data/question.json";
 import styled, { ThemeProvider } from "styled-components";
 import theme from "../../../styles/theme";
 
-import { Button, Row, Col } from "antd";
+import { Button } from "antd";
 import { HeartOutlined } from "@ant-design/icons";
 
 import { withTranslation } from "../../../i18n";
 
 const GameCard = ({ t }) => {
+  const currentURL = window.location.href;
+
+  const pathname = window.location.pathname;
   const [questions, setQuestions] = useState("");
 
   const getQuestion = () => {
@@ -22,7 +25,7 @@ const GameCard = ({ t }) => {
     getQuestion();
   }, []);
 
-  // console.log(theme);
+  console.log(currentURL);
   //  theme or data
 
   return (
@@ -88,12 +91,6 @@ const TheBack = styled.div`
   height: 100%;
   background-color: ${(props) => props.theme.colors.danger};
   border-radius: 10px;
-
-  /*
-  background-image: url("https://bfa.github.io/solitaire-js/img/card_back_bg.png");
-  background-size: auto;
-  background-repeat: round;
-  */
 `;
 
 const TheFront = styled.div`
